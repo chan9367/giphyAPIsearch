@@ -14,10 +14,12 @@ class GifCard extends Component {
           showRandom: null,
         };
       }
-  
-  
+      
   handleInput = (event) => {
     this.setState({searchInput: event.target.value});
+    if(event.key === "Enter"){
+      this.handleSearch();
+    }
   }
   handleSearch = () =>{
     const searchInput = this.state.searchInput;
