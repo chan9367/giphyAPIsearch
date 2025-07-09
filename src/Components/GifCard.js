@@ -24,7 +24,7 @@ class GifCard extends Component {
   handleSearch = () =>{
     const searchInput = this.state.searchInput;
     const API_KEY = "aYSffIUuzE8kkwWACnAUTlwEQkWnzONB";
-    const url = "http://api.giphy.com/v1/gifs/search?q=" + searchInput + "&api_key=" + API_KEY;
+    const url = "https://api.giphy.com/v1/gifs/search?q=" + searchInput + "&api_key=" + API_KEY;
     axios
       .get(url, { params: {key: API_KEY}})
       .then((response) =>{
@@ -37,7 +37,7 @@ class GifCard extends Component {
   }
   handleTrend = () =>{
     const API_KEY = "aYSffIUuzE8kkwWACnAUTlwEQkWnzONB";
-    const url = "http://api.giphy.com/v1/gifs/trending?api_key=" + API_KEY;
+    const url = "https://api.giphy.com/v1/gifs/trending?api_key=" + API_KEY;
      axios
       .get(url, { params: {key: API_KEY}})
       .then((response) =>{
@@ -50,7 +50,7 @@ class GifCard extends Component {
   }
   handleRandom = () =>{
     const API_KEY = "aYSffIUuzE8kkwWACnAUTlwEQkWnzONB";
-    const url = "http://api.giphy.com/v1/gifs/random?api_key=" + API_KEY;
+    const url = "https://api.giphy.com/v1/gifs/random?api_key=" + API_KEY;
     axios
       .get(url, { params: {key: API_KEY}})
       .then((response) =>{
